@@ -9,6 +9,18 @@ on:
     - 'lint_test.py'
   
 jobs:
+
+  integration-test:
+    runs-on: ubuntu-latest
+    container: 
+      image: python:3.9-alipne
+      options: --cpus 1
+    steps:
+      - name: Checkout the repository code
+        uses: actions/checkout@v2 
+      - name: Execute factorial.py
+        run: python factorial.py
+      
   lint:
     runs-on: ubuntu-latest
     steps:
