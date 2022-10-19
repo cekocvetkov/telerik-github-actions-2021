@@ -3,9 +3,9 @@ name: Python-Lint
 on:
   push: 
     branches: [ main ]
-  paths:
-  - 'factorial.py'
-  - 'lint_test.py'
+    paths:
+    - 'factorial.py'
+    - 'lint_test.py'
   
 jobs:
   lint:
